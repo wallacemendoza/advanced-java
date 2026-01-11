@@ -1,0 +1,19 @@
+C3: Cloud Deployment Explanation
+
+Step 1: Select the Cloud Service Provider
+To deploy the multithreaded Spring application with a Java back end and an Angular front end to the cloud, I would use Amazon Web Services (AWS) as the cloud service provider.
+
+Step 2: Push the Docker Image to a Container Registry
+First, the Docker image created from the Dockerfile would be pushed to a container registry such as Amazon Elastic Container Registry (ECR). This would allow the image to be securely stored and versioned for deployment.
+
+Step 3: Deploy the Containerized Application
+Next, I would deploy the container using AWS Elastic Beanstalk or AWS Elastic Container Service (ECS). Elastic Beanstalk would be suitable for a simplified deployment because it can run Docker containers with minimal configuration while automatically handling load balancing, scaling, and health monitoring. Alternatively, ECS would provide more control for managing containers and defining scaling policies.
+
+Step 4: Expose the Application to Users
+The application would be exposed through an Application Load Balancer, which would route HTTP traffic to the running container instances.
+
+Step 5: Configure Environment Variables
+Environment variables, such as the server port and database configuration, would be configured through the AWS service rather than being hardcoded in the application.
+
+Step 6: Ensure Portability and Scalability
+This deployment approach would ensure the application is portable, scalable, and consistent across environments, since the same Docker image can be used for local development, testing, and production cloud deployment.

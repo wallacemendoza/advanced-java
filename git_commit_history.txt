@@ -1,0 +1,23 @@
+wallacemendoza@Mac UI % git log --date=iso
+
+commit e5925a871ac82d3e361fb79130063502e4db9cfd (HEAD -> working_branch, origin/working_branch)
+Author: wmendo8 <wmendo8@wgu.edu>
+Date:   2026-01-09 10:19:23 -0500
+
+    C1: add Dockerfile and dockerignore for single-image deployment
+
+commit 4f0b788a0dfdb5f974a7a30d4809ef2865b50def
+Author: wmendo8 <wmendo8@wgu.edu>
+Date:   2026-01-07 15:46:07 -0500
+
+    B3: add time zone conversion for ET, MT, and UTC
+
+commit 912e66f5c1ccacfbf829f052acbdd8c032a073d2
+Author: wmendo8 <wmendo8@wgu.edu>
+Date:   2026-01-07 15:42:00 -0500
+
+    B2: display reservation price in USD, CAD, and EUR
+
+commit 4f084864ae9639aa7c7a562bfcfa4e1bde5a4717
+Author: wmendo8 <wmendo8@wgu.edu>
+Date:   2026-01-07 15:26:20 -0500
