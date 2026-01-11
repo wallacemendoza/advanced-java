@@ -5,7 +5,6 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.concurrent.*;
 
-
 @Service
 public class WelcomeService {
 
@@ -14,18 +13,20 @@ public class WelcomeService {
 
         Callable<String> enTask = () -> {
             ResourceBundle rb = ResourceBundle.getBundle("messages", Locale.CANADA);
-            return Thread.currentThread().getName() + " - " + rb.getString("welcome");
+            return rb.getString("welcome");
         };
 
         Callable<String> frTask = () -> {
             ResourceBundle rb = ResourceBundle.getBundle("messages", Locale.CANADA_FRENCH);
-            return Thread.currentThread().getName() + " - " + rb.getString("welcome");
+            return rb.getString("welcome");
         };
 
         Future<String> enFuture = executor.submit(enTask);
         Future<String> frFuture = executor.submit(frTask);
 
-        String result = "EN: " + enFuture.get() + "\n" + "FR: " + frFuture.get();
+        String result =
+                "EN: " + enFuture.get() + "\n" +
+                        "FR: " + frFuture.get();
 
         executor.shutdown();
         return result;
